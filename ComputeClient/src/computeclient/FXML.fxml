@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="419.0" prefWidth="678.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="computeclient.FXMLController">
+    <stylesheets>
+        <URL value="@fxml.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="serverName" layoutX="158.0" layoutY="11.0" prefHeight="27.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></TextField>
+      <Text layoutX="11.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Name" wrappingWidth="120.13671875" />
+      <Text layoutX="11.0" layoutY="64.05078125" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Port (Object)" wrappingWidth="120.13671875" />
+      <TextField fx:id="portObject" layoutX="159.0" layoutY="47.0" prefHeight="27.0" prefWidth="150.0">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding></TextField>
+      <Text layoutX="332.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Server Port (File)" wrappingWidth="109.7366943359375" />
+      <TextField fx:id="portFile" layoutX="456.0" layoutY="48.0" prefHeight="26.0" prefWidth="150.0" />
+      <Button fx:id="set" layoutX="631.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleSetButtonAction" text="Set" />
+      <Pane layoutY="85.0" prefHeight="334.0" prefWidth="678.0">
+         <children>
+            <Text layoutX="12.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task List" wrappingWidth="87.13671875" />
+            <Line endX="505.4000244140625" endY="1.0000152587890625" layoutX="173.0" layoutY="-1.0" startX="-173.0" startY="-1.0" />
+            <Button fx:id="upload" layoutX="499.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleUploadButtonAction" prefHeight="25.0" prefWidth="64.0" text="Upload" />
+            <Button fx:id="calculate" layoutX="599.0" layoutY="7.0" mnemonicParsing="false" onAction="#handleCalculateButtonAction" text="Calculate" />
+            <Text layoutX="291.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculation Results" />
+            <TextArea fx:id="results" layoutX="7.0" layoutY="54.0" prefHeight="271.0" prefWidth="663.0" />
+            <ChoiceBox fx:id="taskList" layoutX="114.0" layoutY="7.0" prefHeight="25.0" prefWidth="343.0" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
